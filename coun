@@ -1,0 +1,15 @@
+word = input("Enter a word: ")
+word = word.replace(" ", "")
+
+length_of_word = len(word)
+print("Length of the word:", length_of_word)
+
+repeated_letters = {}
+for char in word:
+    if word.count(char) > 1:
+        repeated_letters[char] = word.count(char)
+
+if repeated_letters:
+    print("Repeated letters and their counts:", repeated_letters)
+else:
+    print("No repeated letters found.")
